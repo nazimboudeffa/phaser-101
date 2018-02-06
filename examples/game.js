@@ -1,15 +1,30 @@
 
-var game = new Phaser.Game(640, 480, Phaser.AUTO, 'phaser-example', { preload: preload, create: create });
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create });
 
 function preload() {
-
-    game.load.image('alien', 'assets/alien.png');
+    game.load.image('mech', 'assets/titan_mech.png');
+    game.load.spritesheet('ms', 'assets/metalslug_mummy37x45.png', 37, 45, 18);
 
 }
 
 function create() {
 
-    //  This simply creates a sprite using the mushroom image we loaded above and positions it at 200 x 200
-    var test = game.add.sprite(200, 200, 'alien');
+    sprite = game.add.sprite(500, 100, 'ms');
+    sprite.animations.add('walk');
+    sprite.animations.play('walk', 50, true);
 
+    //  This creates a simple sprite that is using our loaded image and
+    //  displays it on-screen
+    //  and assign it to a variable
+    var image = game.add.sprite(0, 0, 'mech');
+
+    //enables all kind of input actions on this image (click, etc)
+    image.inputEnabled=true;
+
+    image.events.onInputDown.add(listener,this);
+
+}
+
+function listener () {
+    alert('clicked');
 }
