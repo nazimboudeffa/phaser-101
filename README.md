@@ -5,8 +5,23 @@ Phaser 101
 
 Phaser is a fast, free and fun open source game framework for making desktop and mobile browser HTML5 games. It uses [Pixi.js](https://github.com/GoodBoyDigital/pixi.js/) internally for fast 2D Canvas and WebGL rendering.
 
-Run npm install then npm install grunt-cli
-After that just /node_modules/.bin/grunt
+Install the packages
+
+```bash
+npm install
+```  
+
+Install grunt client
+
+```bash
+npm install grunt-cli
+```  
+
+After that just run
+
+```bash
+/node_modules/.bin/grunt
+```
 
 By Richard Davey, [Photon Storm](http://www.photonstorm.com)
 
