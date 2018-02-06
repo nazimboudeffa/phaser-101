@@ -295,8 +295,8 @@ Phaser.Game.prototype = {
 			this.physics = new Phaser.Physics.Arcade(this);
 			//this.particles = new Phaser.Particles(this);
 			//this.plugins = new Phaser.PluginManager(this, this);
-			this.net = new Phaser.Net(this);
-			this.debug = new Phaser.Utils.Debug(this);
+			//this.net = new Phaser.Net(this);
+			//this.debug = new Phaser.Utils.Debug(this);
 
 			this.stage.boot();
 			this.world.boot();
@@ -397,17 +397,17 @@ Phaser.Game.prototype = {
 
 		if (!this._paused)
 		{
-	        //this.plugins.preUpdate();
-	        this.physics.preUpdate();
+      //this.plugins.preUpdate();
+      this.physics.preUpdate();
 
-	        this.stage.update();
-	        this.input.update();
-	        //this.tweens.update();
-	        //this.sound.update();
+      this.stage.update();
+      this.input.update();
+      //this.tweens.update();
+      //this.sound.update();
 			this.world.update();
 			//this.particles.update();
 			this.state.update();
-	        //this.plugins.update();
+	    //this.plugins.update();
 
 			this.world.postUpdate();
 
@@ -433,15 +433,15 @@ Phaser.Game.prototype = {
 
     	this.state.destroy();
 
-        this.state = null;
-        this.cache = null;
-        this.input = null;
-        this.load = null;
-        //this.sound = null;
-        this.stage = null;
-        this.time = null;
-        this.world = null;
-        this.isBooted = false;
+      this.state = null;
+      this.cache = null;
+      this.input = null;
+      this.load = null;
+      //this.sound = null;
+      this.stage = null;
+      this.time = null;
+      this.world = null;
+      this.isBooted = false;
 
     }
 
