@@ -1,4 +1,4 @@
-![Phaser Logo](http://www.photonstorm.com/wp-content/uploads/2013/09/phaser_10_release.jpg)
+![Phaser Logo](phaser-logo-small.png)
 
 Phaser 101
 ==========
